@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/health",
+      "dest": "/health.js"
+    },
+    {
+      "src": "/auth/(.*)",
+      "dest": "/auth.js"
+    },
+    {
+      "src": "/auth",
+      "dest": "/auth.js"
+    },
+    {
+      "src": "/products/(.*)",
+      "dest": "/products.js"
+    },
+    {
+      "src": "/products",
+      "dest": "/products.js"
+    },
+    {
+      "src": "/categories/(.*)",
+      "dest": "/categories.js"
+    },
+    {
+      "src": "/categories",
+      "dest": "/categories.js"
+    },
+    {
+      "src": "/orders/(.*)",
+      "dest": "/orders.js"
+    },
+    {
+      "src": "/orders",
+      "dest": "/orders.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
+}
